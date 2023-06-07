@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,23 +12,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_221518) do
-  create_table "menu_items", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.decimal "price"
-    t.integer "menu_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["menu_id"], name: "index_menu_items_on_menu_id"
+ActiveRecord::Schema[7.0].define(version: 20_230_606_221_518) do
+  create_table 'menu_items', force: :cascade do |t|
+    t.string 'name'
+    t.text 'description'
+    t.decimal 'price'
+    t.integer 'menu_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['menu_id'], name: 'index_menu_items_on_menu_id'
   end
 
-  create_table "menus", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'menus', force: :cascade do |t|
+    t.string 'name'
+    t.text 'description'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  add_foreign_key "menu_items", "menus"
+  add_foreign_key 'menu_items', 'menus'
 end

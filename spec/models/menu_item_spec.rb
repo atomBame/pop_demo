@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe MenuItem, type: :model do
@@ -13,8 +15,8 @@ RSpec.describe MenuItem, type: :model do
 
     it 'validates the uniqueness of the name scoped to the menu_id' do
       menu = FactoryBot.create(:menu)
-      menu_item = FactoryBot.create(:menu_item, menu: menu)
-      menu_item2 = FactoryBot.build(:menu_item, menu: menu, name: menu_item.name)
+      menu_item = FactoryBot.create(:menu_item, menu:)
+      menu_item2 = FactoryBot.build(:menu_item, menu:, name: menu_item.name)
       expect(menu_item).to be_valid
       expect(menu_item2).to_not be_valid
     end
@@ -22,7 +24,7 @@ RSpec.describe MenuItem, type: :model do
 
   describe 'object instantiation' do
     let!(:menu) { FactoryBot.create(:menu) }
-    let!(:menu_item) { FactoryBot.create(:menu_item, menu: menu) }
+    let!(:menu_item) { FactoryBot.create(:menu_item, menu:) }
 
     it 'creates a valid MenuItem object' do
       expect(menu_item).to be_valid
