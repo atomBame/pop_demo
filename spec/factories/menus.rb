@@ -2,10 +2,11 @@
 
 FactoryBot.define do
   factory :menu do
-    name { Faker::Lorem.word }
+    name { Faker::Name.unique.name }
     description { Faker::Lorem.sentence }
+    restaurant { FactoryBot.create(:restaurant) }
 
-    factory :menu_with_items do
+    trait :with_menu_with_items do
       after(:create) do |menu|
         create_list(:menu_item, 5, menu:)
       end
