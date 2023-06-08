@@ -16,12 +16,12 @@ Level 2: Multiple Menus
 Steps to Run confirming specs:
 
 - bundle install
-- rake db:migrate ( using sqllite DB)
+- rake db:migrate ( using sqlite DB)
 - rspec
 
 
 Notes:
 
-This has been a fun project and I apreciate your time looking over the code. I chose to initiate this app a rails 7 application. The desired logic has been displayeed in the rspec test suite. I decided to complete levels 1 and 2. I completed each level as a seperate Pull Request. I hope this helps to make the reveiw process easier. Please let me know if you encounter any issues, it will require Rails 7 and Ruby 3.2.2.
+This has been a fun project and I appreciate your time looking over the code. I chose to initiate this app a rails 7 application. The desired logic has been displayed in the rspec test suite. I decided to complete levels 1 and 2. I completed each level as a separate Pull Request. I hope this helps to make the review process easier. Please let me know if you encounter any issues, it will require Rails 7 and Ruby 3.2.2.
 
 Thank you!
